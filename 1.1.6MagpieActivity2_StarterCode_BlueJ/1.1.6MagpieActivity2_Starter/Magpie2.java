@@ -60,6 +60,20 @@ public class Magpie2
         {
             response = "Say something for gods sake please i beg you PLEASE";
         }
+        else if (statement.indexOf("Mamma">=0)
+        {
+            response = "Aww man. You got me. You got me good :(.";
+        }
+        else if (statement.indexOf("Joe")>=0)
+        {
+            response = "Who's Joe?";
+        }
+        else if (statement.indexOf("Minecraft")>=0)
+        {
+            response = "It's time to go get your revenge
+So we back in the mine, got our pick axe swinging side to side, day and night
+";
+        }
         else
         {
             response = getRandomResponse();
@@ -73,7 +87,7 @@ public class Magpie2
      */
     private String getRandomResponse()
     {
-        final int NUMBER_OF_RESPONSES = 4;
+        final int NUMBER_OF_RESPONSES = 6;
         double r = Math.random();
         int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
         String response = "";
@@ -94,7 +108,15 @@ public class Magpie2
         {
             response = "You don't say.";
         }
+        else if (whichResponse == 4)
+        {
+            response = "yo das crazy";
+        }
+        else if (whichResponse == 5)
+        {
+            response = "go stupid ahahhh go ctazy ahahaha";
+        }
 
-		return response;
-	}
+        return response;
+    }
 }
