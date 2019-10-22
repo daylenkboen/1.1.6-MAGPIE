@@ -30,6 +30,7 @@ public class Magpie2
      */
     public String getResponse(String statement)
     {
+        statement = statement.trim();
         String response = "";
         if (statement.indexOf("no") >= 0)
         {
@@ -46,6 +47,14 @@ public class Magpie2
                 || statement.indexOf("cat") >=0)
         {
             response = "Tell me more about your pets.";
+        }
+        else if (statement.indexOf("Kaehms")>=0)
+        {
+            response = "He sounds like a good teacher";
+        }
+        else if (statement.length()<= 0)
+        {
+            response = "Say something for gods sake please i beg you PLEASE";
         }
         else
         {
