@@ -52,27 +52,27 @@ public class Magpie2
         else if (statement.indexOf("ms.") >= 0 || statement.indexOf("mrs.") >= 0){
           response = "She sounds like a good teacher.";
         }
-        else if (statement.indexOf("Kaehms")>=0)
+        else if (statement.indexOf("Kaehms")>=0 
+                || statement.indexOf("kaehms")>=0)
         {
             response = "He sounds like a good teacher";
         }
         else if (statement.length()<= 0)
         {
-            response = "Say something for gods sake please i beg you PLEASE";
+            response = "Say something please :(";
         }
-        else if (statement.indexOf("Mamma">=0)
+        else if (statement.indexOf("Mamma") >= 0 || statement.indexOf("mamma") >= 0)
         {
             response = "Aww man. You got me. You got me good :(.";
         }
-        else if (statement.indexOf("Joe")>=0)
+        else if (statement.indexOf("Joe")>=0 || statement.indexOf("joe")>=0)
         {
             response = "Who's Joe?";
         }
-        else if (statement.indexOf("Minecraft")>=0)
+        else if (statement.indexOf("Minecraft")>=0 || statement.indexOf("minecraft")>=0)
         {
-            response = "It's time to go get your revenge
-So we back in the mine, got our pick axe swinging side to side, day and night
-";
+            response = ("It's time to go get your revenge " + 
+            "So we back in the mine, got our pick axe swinging side to side, day and night");
         }
         else
         {
