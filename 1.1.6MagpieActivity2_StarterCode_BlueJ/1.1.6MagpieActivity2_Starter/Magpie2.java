@@ -30,6 +30,7 @@ public class Magpie2
      */
     public String getResponse(String statement)
     {
+        statement = statement.trim();
         String response = "";
         if (statement.indexOf("no") >= 0)
         {
@@ -51,6 +52,28 @@ public class Magpie2
         else if (statement.indexOf("ms.") >= 0 || statement.indexOf("mrs.") >= 0){
           response = "She sounds like a good teacher.";
         }
+        else if (statement.indexOf("Kaehms")>=0 
+                || statement.indexOf("kaehms")>=0)
+        {
+            response = "He sounds like a good teacher";
+        }
+        else if (statement.length()<= 0)
+        {
+            response = "Say something please :(";
+        }
+        else if (statement.indexOf("Mamma") >= 0 || statement.indexOf("mamma") >= 0)
+        {
+            response = "Aww man. You got me. You got me good :(.";
+        }
+        else if (statement.indexOf("Joe")>=0 || statement.indexOf("joe")>=0)
+        {
+            response = "Who's Joe?";
+        }
+        else if (statement.indexOf("Minecraft")>=0 || statement.indexOf("minecraft")>=0)
+        {
+            response = ("It's time to go get your revenge " + 
+            "So we back in the mine, got our pick axe swinging side to side, day and night");
+        }
         else
         {
             response = getRandomResponse();
@@ -64,7 +87,7 @@ public class Magpie2
      */
     private String getRandomResponse()
     {
-        final int NUMBER_OF_RESPONSES = 4;
+        final int NUMBER_OF_RESPONSES = 6;
         double r = Math.random();
         int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
         String response = "";
@@ -85,7 +108,15 @@ public class Magpie2
         {
             response = "You don't say.";
         }
+        else if (whichResponse == 4)
+        {
+            response = "yo das crazy";
+        }
+        else if (whichResponse == 5)
+        {
+            response = "go stupid ahahhh go ctazy ahahaha";
+        }
 
-		return response;
-	}
+        return response;
+    }
 }
