@@ -32,6 +32,7 @@ public class Magpie2
     {
         statement = statement.trim();
         String response = "";
+        //PLTW 1.1.6 Part C start
         int no = findKeyword(statement, "no");
         int famM = findKeyword(statement, "mother");
         int famB = findKeyword(statement, "brother");
@@ -86,6 +87,7 @@ public class Magpie2
         {
             response = "Say something please :(";
         }
+        //PLTW 1.1.6 Part C end
         else if (statement.indexOf("Mamma") >= 0 || statement.indexOf("mamma") >= 0)
         {
             response = "Aww man. You got me. You got me good :(.";
