@@ -32,28 +32,53 @@ public class Magpie2
     {
         statement = statement.trim();
         String response = "";
-        if (statement.indexOf("no") >= 0)
+        int no = findKeyword(statement, "no");
+        int famM = findKeyword(statement, "mother");
+        int famB = findKeyword(statement, "brother");
+        int famD = findKeyword(statement, "father");
+        int famS = findKeyword(statement, "sister");
+        int petd = findKeyword(statement, "dog");
+        int petc = findKeyword(statement, "cat");
+        int genderM = findKeyword(statement, "mr.");
+        int genderF = findKeyword(statement, "ms.");
+        int genderF2 = findKeyword(statement, "mrs.");
+        int teach = findKeyword(statement, "Kaehms");
+        if (no != -1)
         {
             response = "Why so negative?";
         }
-        else if (statement.indexOf("mother") >= 0
-                || statement.indexOf("father") >= 0
-                || statement.indexOf("sister") >= 0
-                || statement.indexOf("brother") >= 0)
+        else if (famM != -1)
         {
             response = "Tell me more about your family.";
         }
-        else if (statement.indexOf("dog") >= 0 || statement.indexOf("cat") >= 0){
+        else if (famB != -1)
+        {
+            response = "Tell me more about your family.";
+        }
+        else if (famS != -1)
+        {
+            response = "Tell me more about your family.";
+        }
+        else if (famD != -1)
+        {
+            response = "Tell me more about your family.";
+        }
+        else if (petd != -1){
           response = "Tell me more about your pets.";
         }
-        else if (statement.indexOf("mr.") >= 0){
+        else if (petc != -1){
+          response = "Tell me more about your pets.";
+        }
+        else if (genderM != -1){
           response = "He sounds like a good teacher.";
         }
-        else if (statement.indexOf("ms.") >= 0 || statement.indexOf("mrs.") >= 0){
+        else if (genderF != -1){
           response = "She sounds like a good teacher.";
         }
-        else if (statement.indexOf("Kaehms")>=0 
-                || statement.indexOf("kaehms")>=0)
+        else if (genderF2 != -1){
+          response = "She sounds like a good teacher.";
+        }
+        else if (teach != -1)
         {
             response = "He sounds like a good teacher";
         }
